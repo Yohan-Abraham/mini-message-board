@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5em 10em;
+}
+
+a {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 0.3em;
+  color: black;
+}
+
+a:hover {
+  background-color: aliceblue;
+}
+
+.title {
+  margin-bottom: 0.5em;
+}
+
+.messages {
+  margin-top: 2em;
+}
+
+.message {
+  border: 1px solid black;
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.author {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.date {
+  grid-row: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 3em;
+  border: 1px solid black;
+  margin: 10em;
+}
+
+button {
+  background-color: black;
+  color: white;
+  margin-top: 1em;
+  border-radius: 10px;
+}

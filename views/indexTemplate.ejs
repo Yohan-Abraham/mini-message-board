@@ -1,12 +1,23 @@
-<body>
-    <h1>Mini Message Board</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <section>
+    <title>Mini Message Board</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <h1 class="title">Mini Message Board</h1>
+        <a href="/new">New Message</a>
+
+    <section class="messages">
         <% for(let i = 0; i < message.length; i++){ %>
-            <div>
+            <div class="message">
                 <h2><%= message[i].text %></h2>
-                <h4>by <%= message[i].user %></h4>
-                <h4><%= message[i].date %></h4>
+                <h4 class="author">by <%= message[i].user %></h4>
+                <h4 class="date"><%= message[i].added %></h4>
             </div>
         <% } %>
     </section>
