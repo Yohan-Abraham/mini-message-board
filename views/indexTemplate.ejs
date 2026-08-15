@@ -1,0 +1,13 @@
+<body>
+    <h1>Mini Message Board</h1>
+
+    <section>
+        <% for(let i = 0; i < message.length; i++){ %>
+            <div>
+                <h2><%= message[i].text %></h2>
+                <h4>by <%= message[i].user %></h4>
+                <h4><%= message[i].date %></h4>
+            </div>
+        <% } %>
+    </section>
+</body>
