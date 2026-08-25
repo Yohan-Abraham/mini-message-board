@@ -18,16 +18,6 @@ app.use('/', indexRoute);
 // new route
 app.use('/new', newRoute);
 
-app.post('/new', (req, res) => {
-  message.push({
-    text: req.body.message,
-    user: req.body.author,
-    added: new Date(),
-  });
-
-  res.redirect('/');
-});
-
 app.listen(PORT, (error) => {
   if (error) {
     throw error;

@@ -15,9 +15,9 @@
     <section class="messages">
         <% for(let i = 0; i < message.length; i++){ %>
             <div class="message">
-                <h2><%= message[i].text %></h2>
-                <h4 class="author">by <%= message[i].user %></h4>
-                <h4 class="date"><%= message[i].added %></h4>
+                <h2><%= message[i].message %></h2>
+                <h4 class="author">by <%= message[i].author %></h4>
+                <h4 class="date"><%= message[i].date %></h4>
             </div>
         <% } %>
     </section>
