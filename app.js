@@ -3,7 +3,7 @@ const app = express();
 const newRoute = require('./routes/new');
 const indexRoute = require('./routes/index');
 const message = require('./models/message');
-const PORT = 3000;
+const PORT = process.env.port || 3000;
 const path = require('node:path');
 
 // app.js
