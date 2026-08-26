@@ -3,6 +3,7 @@ const app = express();
 const newRoute = require('./routes/new');
 const indexRoute = require('./routes/index');
 const message = require('./models/message');
+const deleteController = require('./controllers/deleteController');
 const PORT = process.env.port || 3000;
 const path = require('node:path');
 
@@ -17,6 +18,8 @@ app.use('/', indexRoute);
 
 // new route
 app.use('/new', newRoute);
+
+app.post('/delete/:id', deleteController.post);
 
 app.listen(PORT, (error) => {
   if (error) {

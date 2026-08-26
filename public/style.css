@@ -59,3 +59,14 @@ button {
   margin-top: 1em;
   border-radius: 10px;
 }
+
+.message-container {
+  display: grid;
+  grid-column: 5fr 1fr;
+}
+
+#delete-form {
+  border: none;
+  margin: 0;
+  padding: 0;
+}

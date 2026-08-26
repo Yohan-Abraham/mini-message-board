@@ -14,11 +14,16 @@
 
     <section class="messages">
         <% for(let i = 0; i < message.length; i++){ %>
+            <div class="message-container">
             <div class="message">
                 <h2><%= message[i].message %></h2>
                 <h4 class="author">by <%= message[i].author %></h4>
                 <h4 class="date"><%= message[i].date %></h4>
             </div>
+                    <form id="delete-form" action="/delete/<%= message[i].id %>" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+        </div>
         <% } %>
     </section>
 </body>

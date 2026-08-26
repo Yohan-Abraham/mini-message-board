@@ -13,7 +13,7 @@ async function addMessage(message, author) {
 }
 
 async function removeMessage(id) {
-  await pool.query(`DELETE FROM messages WHERE id == ($1);`, [id]);
+  await pool.query(`DELETE FROM messages WHERE id = ($1);`, [id]);
 }
 
 module.exports = {
