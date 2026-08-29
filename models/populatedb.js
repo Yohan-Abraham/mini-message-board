@@ -16,7 +16,7 @@ VALUES ('Hi there!', 'Amando', CURRENT_DATE),
 async function main() {
   console.log('seeding...');
   const client = new Client({
-    connectionString: 'postgresql://yohanabraham@localhost:5432/messages',
+    connectionString: process.env.DATABASE_URL,
   });
   await client.connect();
   await client.query(SQL);
